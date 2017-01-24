@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Profile Info</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            background: gray url("https://www.tutorialspoint.com/images/pattern.png") repeat scroll center center !important;
+        }
+
+        .Collapsible-Body-Attr {
+            background-color: white;
+            padding: 20px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        form .row {
+            margin-bottom: 0;
+        }
+
+        form .input-field {
+            margin-top: 0px;
+        }
+
+        td {
+            border-radius: 2px;
+            display: table-cell;
+            padding: 0 5px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        #ActivityDiv > table {
+            border: 1px solid #c1c1c1;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+            display: table;
+            width: 100%;
+        }
+
+        .header {
+            background-color: white;
+            border-bottom: 3px solid black;
+            height: 55px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .header h3, .header h4 {
+                margin-top: 0px;
+                text-align: center;
+            }
+    </style>
+</head>
+
+<body>
+
+    <!--<div class="container-fluid">-->
+
+    <div class="row header">
+        <h3 class="hide-on-small-only">Profile Information</h3>
+        <h4 class="hide-on-med-and-up" style="margin-top:5px; ">Profile Information</h4>
+    </div>
+
+    <!--</div>-->
+    <br />
+    <br />
+    <br />
+    <div class="container">
+        <div class="col l2 m2">
+        </div>
+        <div class="col l8 m10 s12">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">info</i>Basic Information</div>
+                    <div class="collapsible-body Collapsible-Body-Attr">
+
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row" style="padding-top: 20px;">
+                                    <div class="input-field col l6 m6 s12">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="first_name" type="text" class="validate">
+                                        <label for="first_name">First Name</label>
+                                    </div>
+                                    <div class="input-field col l6 m6 s12">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="last_name" type="text" class="validate">
+                                        <label for="last_name">Last Name</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col l6 m6 s12">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="email" type="text" class="validate">
+                                        <label for="email">Email Id</label>
+                                    </div>
+                                    <div class="input-field col l6 m6 s12">
+                                        <i class="material-icons prefix">contacts</i>
+                                        <input id="mobile" type="text" class="validate">
+                                        <label for="mobile">Mobile Number</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col l6 m6 s12">
+                                        <i class="material-icons prefix">perm_identity</i>
+                                        <select class="icons">
+                                            <option value="" disabled selected>Choose your gender</option>
+                                            <option value="" data-icon="https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" class="circle">Male</option>
+                                            <option value="" data-icon="https://cdn2.iconfinder.com/data/icons/business-management-1/256/Businesswoman-512.png" class="circle">Female</option>
+                                        </select>
+                                        <label></label>
+                                    </div>
+                                    <div class="input-field col l6 m6 s12">
+                                        <i class="material-icons prefix">perm_contact_calendar</i>
+                                        <label for="DOB">Date of birth</label>
+                                        <input id="DOB" type="text" class="datepicker" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col l12 m12 s12">
+                                        <i class="material-icons prefix">location_on</i>
+                                        <textarea id="location" class="materialize-textarea"></textarea>
+                                        <label for="location">Location</label>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </li>
+                <li style="background: white">
+                    <div class="collapsible-header"><i class="material-icons">library_books</i>Academic Information</div>
+                    <div class="collapsible-body Collapsible-Body-Attr">
+
+                        <!-- -----------------------Academic Information-----------------------------------  -->
+                        <ul class="collapsible" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">class</i>Class 10</div>
+                                <div class="collapsible-body Collapsible-Body-Attr">
+
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <div class="row" style="padding-top: 20px;">
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">view_module</i>
+                                                    <input id="school_name" type="text" class="validate">
+                                                    <label for="school_name">School Name</label>
+                                                </div>
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">label</i>
+                                                    <input id="board_name" type="text" class="validate">
+                                                    <label for="board_name">Board Name</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">grade</i>
+                                                    <select class="icons">
+                                                        <option value="" disabled selected>Choose your Marks</option>
+                                                        <option value="" class="circle">90% - 100%</option>
+                                                        <option value="" class="circle">80% - 90%</option>
+                                                        <option value="" class="circle">70% - 80%</option>
+                                                        <option value="" class="circle">60% - 70%</option>
+                                                        <option value="" class="circle">50% - 60%</option>
+                                                        <option value="" class="circle">Below 50%</option>
+                                                    </select>
+                                                    <label></label>
+                                                </div>
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">perm_contact_calendar</i>
+                                                    <label for="POD10">Passing out date</label>
+                                                    <input id="POD10" type="text" class="datepicker" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">class</i>Class 12</div>
+                                <div class="collapsible-body Collapsible-Body-Attr">
+
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <div class="row" style="padding-top: 20px;">
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">view_module</i>
+                                                    <input id="school_name" type="text" class="validate">
+                                                    <label for="school_name">School Name</label>
+                                                </div>
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">label</i>
+                                                    <input id="board_name" type="text" class="validate">
+                                                    <label for="board_name">Board Name</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">grade</i>
+                                                    <select class="icons">
+                                                        <option value="" disabled selected>Select your Marks</option>
+                                                        <option value="" class="circle">90% - 100%</option>
+                                                        <option value="" class="circle">80% - 90%</option>
+                                                        <option value="" class="circle">70% - 80%</option>
+                                                        <option value="" class="circle">60% - 70%</option>
+                                                        <option value="" class="circle">50% - 60%</option>
+                                                        <option value="" class="circle">Below 50%</option>
+                                                    </select>
+                                                    <label></label>
+                                                </div>
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">perm_contact_calendar</i>
+                                                    <label for="POD12">Passing out date</label>
+                                                    <input id="POD12" type="text" class="datepicker" />
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">class</i>Graduation</div>
+                                <div class="collapsible-body Collapsible-Body-Attr">
+
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <div class="row" style="padding-top: 20px;">
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">view_module</i>
+                                                    <input id="college_name" type="text" class="validate">
+                                                    <label for="college_name">College Name</label>
+                                                </div>
+
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">label</i>
+                                                    <input id="university_name" type="text" class="validate">
+                                                    <label for="university_name">University Name</label>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">view_list</i>
+                                                    <select class="icons">
+                                                        <option value="" disabled selected>Select your Course</option>
+                                                        <option value="" class="circle">BTech.</option>
+                                                        <option value="" class="circle">B.E.</option>
+                                                        <option value="" class="circle">M.A.</option>
+                                                        <option value="" class="circle">B.A.</option>
+                                                        <option value="" class="circle">B Arch.</option>
+                                                        <option value="" class="circle">M Phil.</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="input-field col l6 m6 s12">
+                                                    <i class="material-icons prefix">grade</i>
+                                                    <select class="icons">
+                                                        <option value="" disabled selected>Select your Marks</option>
+                                                        <option value="" class="circle">90% - 100%</option>
+                                                        <option value="" class="circle">80% - 90%</option>
+                                                        <option value="" class="circle">70% - 80%</option>
+                                                        <option value="" class="circle">60% - 70%</option>
+                                                        <option value="" class="circle">50% - 60%</option>
+                                                        <option value="" class="circle">Below 50%</option>
+                                                    </select>
+                                                    <label></label>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </div>
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- ------------------------------End Academic Information------------------------ -->
+                    </div>
+                </li>
+                <li style="background: white">
+                    <div class="collapsible-header"><i class="material-icons">games</i>Extracurricular Activities</div>
+                    <div class="collapsible-body Collapsible-Body-Attr">
+
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row" style="padding-top: 20px;" id="ActivityDiv">
+                                    <table class="responsive-table">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="Activity">Activity</th>
+                                                <th data-field="Activity">ActivityYear</th>
+                                                <th data-field="award">Award</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody id="ActivityTable">
+                                            <tr>
+                                                <td><input id="activity" type="text" class="validate" placeholder="Enter Activity name"></td>
+                                                <td><input type="text" class="datepicker" placeholder="Enter year" /></td>
+                                                <td><input id="award" type="text" class="validate" placeholder="Enter achievement"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                    <a id="addRow" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+            <br />
+            <div style="text-align:center;">
+                <a class="waves-effect waves-light btn green">Save</a>
+                <a class="waves-effect waves-light btn red">Cancel</a>
+            </div>
+            <br />
+            <br />
+
+        </div>
+        <div class="col l2 m12">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+    <script>
+        $('.collapsible').collapsible();
+        $('select').material_select();
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+
+        $("#addRow").click(function () {
+            let HTMLTAG = '<tr><td><input id="activity" type="text" class="validate" placeholder="Enter Activity name"></td><td><input type="text" class="datepicker" placeholder="Enter year"></td><td><input id="award" type="text" class="validate" placeholder="Enter achievement"></td></tr>'
+            //$("#ActivityTable").append(HTMLTAG);
+            $("table tbody").append(HTMLTAG);
+            $('.datepicker').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 15 // Creates a dropdown of 15 years to control year
+            });
+        });
+    </script>
+</body>
+</html>
