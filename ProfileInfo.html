@@ -328,7 +328,7 @@
             </div>
             <br />
             <br />
-
+            <input id="hdValue" value="1" hidden="hidden" />
         </div>
         <div class="col l2 m12">
         </div>
@@ -346,13 +346,21 @@
         });
 
         $("#addRow").click(function () {
-            let HTMLTAG = '<tr><td><input id="activity" type="text" class="validate" placeholder="Enter Activity name"></td><td><input type="text" class="datepicker" placeholder="Enter year"></td><td><input id="award" type="text" class="validate" placeholder="Enter achievement"></td></tr>'
+            let datePickerId = $("#hdValue").val();
+            let HTMLTAG = '<tr><td><input type="text" class="validate" placeholder="Enter Activity name"></td><td><input type="text" class="datepicker ' + datePickerId + '" placeholder="Enter year"></td><td><input type="text" class="validate" placeholder="Enter achievement"></td></tr>'
             //$("#ActivityTable").append(HTMLTAG);
             $("table tbody").append(HTMLTAG);
-            $('.datepicker').pickadate({
+            let newdatePickerId = "datepicker" + datePickerId;
+            alert(newdatePickerId);
+            $('.' + newdatePickerId).pickadate({
                 selectMonths: true, // Creates a dropdown to control month
                 selectYears: 15 // Creates a dropdown of 15 years to control year
             });
+            let hdValue = ++datePickerId;
+            alert(hdValue);
+            document.getElementById("hdValue").value = hdValue;
+            //$("#hdValue").value(hdValue);
+            
         });
     </script>
 </body>
